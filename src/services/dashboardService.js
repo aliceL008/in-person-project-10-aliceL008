@@ -17,7 +17,7 @@ export async function fetchDashboardData(city) {
   const results = await Promise.allSettled(
     names.map(name =>
       cachedFetch(
-        `http://localhost:3000/${name}?city=${encodeURIComponent(city)}`,
+        `http://localhost:3001/${name}?city=${encodeURIComponent(city)}`,
         { timeout: 3000 }
       )
     )
